@@ -102,7 +102,6 @@ function Create(props) {
     return (
         <div className="modal">
             <div className="modal_content">
-                {/* <span className="close" onClick={handleClick}>&times;</span> */}
                 {qItems.map((qItem, index) => {
                     return (
                         <div className="create-item" key={index}>
@@ -132,11 +131,14 @@ function Create(props) {
                     );
                 })}
                 <div>
-                    <button onClick={handleAdd}>Add</button>
+                    <button className="add" onClick={handleAdd}><strong>+ Add item</strong></button>
                 </div>
                 <div className="save-actions">
+                <div className="save-button-group">
                     <button className="save" onClick={handleSave}>Save</button>
                     <button className="close" onClick={handleClick}>Cancel</button>
+
+                </div>
                 </div>
                 
                 

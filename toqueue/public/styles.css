@@ -48,7 +48,7 @@
     background: #fff;
     padding: 15px;
     border-radius: 7px;
-    box-shadow: 0 1px 5px rgb(138, 137, 137);
+    /* box-shadow: 0 1px 5px rgb(138, 137, 137); */
   }
   .q-item h1 {
     font-size: 1.1em;
@@ -56,19 +56,23 @@
   }
   .q-item p {
     font-size: 1.1em;
-    margin-bottom: 10px;
+    margin-top: 3px;
+    margin-bottom: 6px;
     white-space: pre-wrap;
     word-wrap: break-word;
   }
   
   .q-item button {
-    position: relative;
+    position: absolute;
     float: right;
-    margin-right: 10px;
-    color: #f5ba13;
+    right: 10px;
+    top: 8px;
+    border-radius: 25px;
+    background-color: #5ea758;
+    color: white;
     border: none;
-    width: 36px;
-    height: 36px;
+    width: 45px;
+    height: 45px;
     cursor: pointer;
     outline: none;
   }
@@ -160,7 +164,7 @@
   }
 
   .create-item{
-    margin: 40px 0;
+    margin: 25px 0 5px 0;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -199,16 +203,51 @@
   
     height: 60px;
     width: 400px;
-    /* margin: 30px auto 20px auto; */
     background: #fff;
     padding: 15px;
     border-radius: 7px;
-    box-shadow: 0 1px 5px rgb(138, 137, 137);
+    border: solid;
+    border-color: rgb(167, 167, 167);
+  }
+
+  .add {
+    float: right;
+    color: #5ea758;
+    margin: 0 25px 0 0;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+  }
+
+  .add:hover {
+    color: #457b41;
+
   }
 
   .save-actions {
     text-align: center;
   }
+
+  .save-button-group > * {
+    width: 70px;
+    margin: 40px 10px 0 10px;
+    height: 30px;
+    background-color: white;
+    color: rgb(138, 137, 137);
+    border-color: rgb(138, 137, 137);;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .save-button-group > *:hover{
+    color: white;
+    background-color: rgb(138, 137, 137);
+  }
+
 
   .modal_content .btn{
     font-size: 1rem;

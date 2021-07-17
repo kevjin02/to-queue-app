@@ -36,7 +36,7 @@ function QueueDisplay(props){
   return (
     <div className="q-item">
       <p>{props.qItemText}</p>
-      {(props.qId >= props.length - 1) ? <button onClick={handleDelete}>Done</button> : <button onClick={handleNext}>Next</button>}
+      {(props.qId >= props.length - 1) ? <button onClick={handleDelete}><strong>Done</strong></button> : <button onClick={handleNext}><strong>Next</strong></button>}
     </div>
   );
 }
