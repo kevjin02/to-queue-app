@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node toqueueserver/app.js",
-    "heroku-postbuild": "cd toqueue && npm install && npm run build"
+    "heroku-postbuild": "cd toqueue && npm install && npm run build && cd .. && cd toqueueserver && npm install start"
   },
   "repository": {
     "type": "git",
