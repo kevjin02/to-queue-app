@@ -30,7 +30,7 @@ class App extends Component {
    */
   componentDidMount() {
     axios
-      .get('http://localhost:8082/api/queues')
+      .get('/api/queues')
       .then(res => {
         
         this.setState({
@@ -50,7 +50,7 @@ class App extends Component {
 
   addQueue = (newQueue) => {
         axios
-                .post('http://localhost:8082/api/queues/', {qIndex: 0, arrQueue: newQueue})
+                .post('/api/queues/', {qIndex: 0, arrQueue: newQueue})
                 .then(
                   res => {
                   this.setState(prevState => ({
@@ -71,7 +71,7 @@ class App extends Component {
    */
   deleteQueue = (index) => {
       axios
-          .delete('http://localhost:8082/api/queues/'+ this.state.queues[index]._id)
+          .delete('/api/queues/'+ this.state.queues[index]._id)
           .then(res => {
             let updatedQueue = this.state.queues.filter((queueItem, i) => {
               return i !== index;
@@ -95,7 +95,7 @@ class App extends Component {
   handleNext = (index) => {
   
       axios
-          .put('http://localhost:8082/api/queues/'+ this.state.queues[index]._id, {...this.state.queues[index], qIndex: 1+this.state.queues[index].qIndex})
+          .put('/api/queues/'+ this.state.queues[index]._id, {...this.state.queues[index], qIndex: 1+this.state.queues[index].qIndex})
           .then(res => {
             const updatedQueues = [...this.state.queues];
             

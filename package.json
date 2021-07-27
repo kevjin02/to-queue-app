@@ -1,0 +1,27 @@
+{
+  "name": "to-queue-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "toqueueserver/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node toqueueserver/app.js",
+    "heroku-postbuild": "npm install npm && run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevjin02/to-queue-app.git"
+  },
+  "engines": {
+    "node": "10.16.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevjin02/to-queue-app/issues"
+  },
+  "homepage": "https://github.com/kevjin02/to-queue-app#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0"
+  }
+}
